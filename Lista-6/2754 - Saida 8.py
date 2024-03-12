@@ -1,0 +1,11 @@
+x = 234.345000
+y = 45.698000
+print(f"{x:.6f} - {y:.6f}")
+print(f"{x:.0f} - {y:.0f}")
+print(f"{x:.1f} - {y:.1f}")
+print(f"{x:.2f} - {y:.2f}")
+print(f"{x:.3f} - {y:.3f}")
+print(f"{x:e} - {y:e}")
+print(f"{x:E} - {y:E}")
+print(f"{x:g} - {y:g}")
+print(f"{x:g} - {y:g}")
