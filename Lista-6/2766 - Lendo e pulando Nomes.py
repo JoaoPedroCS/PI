@@ -1,3 +1,8 @@
-
-x = list(map(str, input().split()))
-print(x[2],x[6],x[8])
+try:
+    while True:
+        for i in range(10):
+            x = input()
+            if i == 2 or i == 6 or i == 8:
+                print(x)
+except EOFError:
+    exit()
