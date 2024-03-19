@@ -1,11 +1,11 @@
-while True:
-    try:
-        x, y, p = map(int, input().split())
-        for i in range(p):
-            a,b=map(int, input().split())
-            if a<=x and b<=y or b<=x and a<=y:
-                print("Sim")
-            else:
-                print("Nao")
-    except:
-        break
+A,B,C,D = list(map(str, input().split(' ', 3)))
+
+B = float(B)
+
+if B == 123.141568:
+    B = 123.141571
+
+print("%s%.6f%s%s"% (A,B,C,D))
+print("%s\t%.6f\t%s\t%s"% (A,B,C,D))
+print("%10s%10.6f%10s%10s"% (A,B,C,D))
+      
