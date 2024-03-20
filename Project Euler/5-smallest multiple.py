@@ -13,4 +13,4 @@ while True:
         break
     elif contagem < 14:
         i += 20
-print("terminou")
+print("end")
