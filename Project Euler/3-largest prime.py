@@ -16,5 +16,6 @@ def prime_factors(n):
                 if is_prime(pair):
                     factors.append(pair)
     return sorted(factors)
-
-print(prime_factors(n))
+l = prime_factors(n)
+print(l)
+print(l[-1])

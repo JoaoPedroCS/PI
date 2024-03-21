@@ -1,5 +1,5 @@
 i = 2520
-l = [3,6,7,8,9,11,12,13,14,15,16,17,18,19]
+l = [19, 17, 15, 13, 11, 9, 7, 3, 18, 16, 14, 12, 8, 6]
 while True:
     contagem = 0
     for d in l:
@@ -9,7 +9,6 @@ while True:
             break
     if contagem >=14:
         print(i, contagem)
-        x = 0
         break
     elif contagem < 14:
         i += 20
