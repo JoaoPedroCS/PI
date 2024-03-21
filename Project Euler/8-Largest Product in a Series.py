@@ -14,7 +14,7 @@ for z in range(1000-end):
         x = list_numb[i]
         waste.append(x)
 
-    if abs(prod(waste)) > prod(final_list):
+    if prod(waste) > prod(final_list):
         final_list = waste
 
     start += 1
