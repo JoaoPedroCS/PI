@@ -1,11 +1,12 @@
-x = 0
-y = 1
+valor_ant = 0
+valor_atual = 1
 l = [0]
-while y < 4000000:
-    z = x
-    x = y
-    y = z + y
-    if y%2==0:
-        l.append(y)
+while valor_atual < 4000000:
+    guard_lug = valor_atual
+    valor_atual = valor_ant + valor_atual
+    valor_ant = guard_lug
+    
+    if valor_atual%2==0:
+        l.append(valor_atual)
     print(l)
 print(sum(l))

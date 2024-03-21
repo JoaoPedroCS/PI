@@ -9,6 +9,5 @@ for i in range(n):
         print(f"{nome}: {sum(notas)/len(notas):.1f}")
     elif len(notas) == 4:
         notas.sort()
-        media = (notas [1]+notas[2]+notas[3])/3
+        media = (notas[1] + notas[2] + notas[3])/3
         print(f"{nome}: {media:.1f}")
-    
