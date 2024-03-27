@@ -1,3 +1,5 @@
+import time
+start_time = time.time()
 i = 2520
 l = [19, 17, 15, 13, 11, 9, 7, 3, 18, 16, 14, 12, 8, 6]
 while True:
@@ -8,8 +10,8 @@ while True:
         elif i % d != 0:
             break
     if contagem >=14:
-        print(i, contagem)
+        print(i)
         break
     elif contagem < 14:
         i += 20
-print("end")
+print(f"--- {(time.time() - start_time):.5f} seconds ---")

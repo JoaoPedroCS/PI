@@ -1,3 +1,5 @@
+import time
+start_time = time.time()
 def prod(w):
     prod = 1
     for j in w:
@@ -21,3 +23,4 @@ for z in range(1000-end):
     end += 1
 
 print(final_list, "O produto é:", prod(final_list))
+print(f"--- {(time.time() - start_time):.5f} seconds ---")

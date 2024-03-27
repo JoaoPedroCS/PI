@@ -1,6 +1,10 @@
+import time
+start_time = time.time()
 import math
 def is_prime(n):
-    for x in range(2, math.floor(math.sqrt(n)) + 1):
+    if n % 2 == 0 and n != 2:
+        return False
+    for x in range(3, math.floor(math.sqrt(n)) + 1, 2):
         if n % x == 0:
             return False
     return True
@@ -18,4 +22,4 @@ while True:
         print(l)
         break
 print(l[-1], "end")
-
+print(f"--- {(time.time() - start_time):.5f} seconds ---")

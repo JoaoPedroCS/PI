@@ -1,20 +1,21 @@
+import time
+start_time = time.time()
 import math
 def is_prime(n):
-    for x in range(2, math.floor(math.sqrt(n)) + 1):
+    if n % 2 == 0 and n != 2:
+        return False
+    for x in range(3, math.floor(math.sqrt(n)) + 1, 2):
         if n % x == 0:
             return False
     return True
 n = 3
 l = [2]
-while True:
+while n < 2000000:
     if is_prime(n):
         l.append(n)
         n += 2
     else:
         n += 2
 
-
-    if l[-1] >= 2000000:
-        print(sum(l)-l[-1])
-        break
-print(l[-1], "end")
+print(sum(l))
+print(f"--- {(time.time() - start_time):.5f} seconds ---")

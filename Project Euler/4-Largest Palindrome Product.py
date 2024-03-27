@@ -1,3 +1,5 @@
+import time
+start_time = time.time()
 def inverse(x):
   return x[::-1]
 
@@ -16,4 +18,9 @@ while x == 1:
         if i % d == 0 and no_digits(i/d) == 3:
           par = i / d
           print(d, par)
-          
+          print(i)
+          x = 0
+          break
+    if x == 0:
+      break
+print(f"--- {(time.time() - start_time):.5f} seconds ---")

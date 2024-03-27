@@ -1,3 +1,5 @@
+import time
+start_time = time.time()
 sum_square = 0
 square_sum = 0
 for i in range(1, 101):
@@ -6,3 +8,4 @@ for i in range(1, 101):
 
 square_sum = square_sum**2
 print(square_sum-sum_square)
+print(f"--- {(time.time() - start_time):.5f} seconds ---")
