@@ -6,13 +6,12 @@ def is_prime(n):
 def verifica_despojado(n):
     if n == 1:
         return False
-    if n % 4 == 0:
-        return False
+
     primo = True
-    for i in range(3, int(math.sqrt(n)) + 1, 2):
+    for i in range(2, int(math.sqrt(n)) + 1):
         if n % (i*i) == 0:
             return False
-        if n % i == 0 or n % 2 == 0:
+        if n % i == 0:
             primo = False
     return not primo
 
