@@ -15,7 +15,6 @@ def Problema1(j):
         for x in range(3, 50000000, 2):
             if is_prime(x):
                 cont += 1
-
             if cont == n:
                 break
         return x
@@ -27,7 +26,6 @@ def Problema1(j):
         for i in range(n1+1, n2+1, 2):
             if is_prime(i):
                 contagem += 1
-
         return contagem
 
 
