@@ -97,7 +97,8 @@ def main():
     Problema2(1000)
     Problema3(10)
     Problema3_metodo(10)
-    
+    #procurei informação em todo lugar, e nao existe forma mais rapida de verificar
+    #até porque o maior numero de marsenne descoberto é 51°, entao é um programa pesado
     
 if __name__ == '__main__':
     main()
