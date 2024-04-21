@@ -12,7 +12,7 @@ def Problema1(j):
         if n == 1:
             return 2
         cont = 1
-        for x in range(3, 50000000, 2):
+        for x in range(3, 1000000000000000000000000000000000000000, 2):
             if is_prime(x):
                 cont += 1
             if cont == n:
