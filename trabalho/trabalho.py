@@ -91,7 +91,7 @@ def Problema3_metodo(j):
             if is_prime(p) and lucas_lehmer(p):
                 l.append(p)
             p += 2
-        print(f'Problema 3: resultado = {sum(l)} - *methodo mais rapido possivel')
+        print(f'Problema 3: resultado = {sum(l)} - *verificação mais rapida')
 
 
 def main():
