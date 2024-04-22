@@ -28,11 +28,15 @@ def Problema1(j):
                 contagem += 1
         return contagem
 
-
-    p1 = enesimo_primo(j)**2
-    p2 = enesimo_primo(j+1)**2
-
-    print(f'Problema 1: resultado = {dif_qntd_primos(p1,p2)}')
+    cont = 0
+    for i in range(2, 101):
+        p1 = enesimo_primo(i)**2
+        p2 = enesimo_primo(i+1)**2
+        if dif_qntd_primos(p1, p2) <= j:
+            print(f'Problema 1: resultado = {i},{i+1}')
+            cont += 1
+    if cont == 0:
+        print(f"Problema 1: resultado = nao existe")
 
 def Problema2(j):
     def generate_pascals_triangle(num_rows):
@@ -48,7 +52,7 @@ def Problema2(j):
 
     triangle = generate_pascals_triangle(j)
     cont = 0
-    for i in range(15):
+    for i in range(j):
         for x in triangle[i]:
             if x % 2 != 0:
                 cont += 1
@@ -93,12 +97,13 @@ def Problema3_metodo(j):
 
 
 def main():
-    Problema1(100)
-    Problema2(1000)
-    Problema3(10)
-    Problema3_metodo(10)
+    Problema1(4)#quanto a diferença entre c(pn+1^2) - c(pn^2) < n, aqui é 4(pedido no enuciado)
+    Problema2(1000)#Valor de i nesse caso é de 1 até 1000(pedido no enuciado)
+    Problema3(30)#O numero dos primeiros x valores para serem somados, nesse caso 30(mesmo do enuciado)
+    Problema3_metodo(10)#O numero dos primeiros x valores para serem somados, nesse caso 10(mesmo do exemplo)
     #procurei informação em todo lugar, e nao existe forma mais rapida de verificar
     #até porque o maior numero de marsenne descoberto é 51°, entao é um programa pesado
-    
+
 if __name__ == '__main__':
     main()
+print("Joao Pedro Correa Silva, 11202321629")

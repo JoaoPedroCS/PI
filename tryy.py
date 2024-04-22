@@ -1,32 +1,35 @@
-import time 
-start_time = time.time()
-def Problema3_metodo(j):
-        import math
-        def is_prime(n):
-            if n % 2 == 0 and n != 2:
-                return False
-            for x in range(3, math.floor(math.sqrt(n)) + 1, 2):
-                if n % x == 0:
-                    return False
-            return True
-        def lucas_lehmer(p):
-            if p == 2:
-                return True
-            s = 4
-            m = (2**p) - 1
-            for j in range(p-2):
-                s = ((s**2) - 2) % m
-            if s == 0:
-                return True
-            else:
-                return False
-        p = 3
-        l = [2]
-        while len(l) < j:
-            if is_prime(p) and lucas_lehmer(p):
-                l.append(p)
-            p += 2
-        print(f'Problema 3: resultado = {sum(l)} - calculo bruto')
+import math
+def e_primo(m):
+    if m % 2 == 0 and m != 2:
+        return False
+    for x in range(3, math.floor(math.sqrt(m)) + 1, 2):
+        if m % x == 0:
+            return False
+    return True
 
-Problema3_metodo(20)
-print(f"--- {(time.time() - start_time):.5f} seconds ---")
+def no_primo(m):
+    if m == 1:
+        return 2
+    cont = 1
+    for x in range(3, 50000000, 2):
+        if e_primo(x):
+            cont += 1
+
+        if cont == m:
+            break
+    return x
+
+def diferenca(m1,m2):
+    if m1 % 2 != 0:
+        m1 += 1
+    contagem = 0
+    for i in range(m1+1, m2+1, 2):
+        if e_primo(i):
+            contagem += 1
+
+    return contagem
+for i in range(100):
+    p1 = no_primo(i)**2
+    p2 = no_primo(i+1)**2
+    if diferenca(p1,p2) < 4:
+        print(f'Problema 1: resultado = {diferenca(p1,p2)}')

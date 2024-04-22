@@ -1,6 +1,6 @@
 #Trabalho
 print("Maria Heloisa Prado | 11202321597")
-def Problema1(m):
+def Problema1(w):
     import math
     def e_primo(m):
         if m % 2 == 0 and m != 2:
@@ -29,14 +29,18 @@ def Problema1(m):
         for i in range(m1+1, m2+1, 2):
             if e_primo(i):
                 contagem += 1
-
         return contagem
 
-
-    p1 = no_primo(m)**2
-    p2 = no_primo(m+1)**2
-
-    print(f'Problema 1: resultado = {diferenca(p1,p2)}')
+    vezes = 0
+    for i in range(2, w+1):
+        p1 = no_primo(i)**2
+        p2 = no_primo(i+1)**2
+        if diferenca(p1,p2) < 4:
+            print(f'Problema 1: resultado = {i},{i+1}')
+            vezes += 1
+        
+    if vezes == 0:
+        print(f"Problema 1: resultado = Não tem pares que satisfazem")
 
 def Problema2(m):
     def triangulo_de_pascal(qnts_linha):
@@ -52,7 +56,7 @@ def Problema2(m):
 
     triangulo = triangulo_de_pascal(m)
     contagem = 0
-    for i in range(15):
+    for i in range(m):
         for x in triangulo[i]:
             if x % 2 != 0:
                 contagem += 1
@@ -93,14 +97,14 @@ def Problema3_resolução(m): #Pode Demorar dependendo, mas está correto - é a
             if e_primo(n) and verificacao(n):
                 listinha.append(n)
             n += 2
-        print(f'Problema 3: resultado = {sum(listinha)} - *+ rapido possivel')
+        print(f'Problema 3: resultado = {sum(listinha)} - *mais rapido possivel')
 
 
 def main():
-    Problema1(100)
-    Problema2(1000)
-    Problema3(15)
-    Problema3_resolução(15)
+    Problema1(100)#ate qual numero para n 2<= n <= 100, nesse caso: 100
+    Problema2(1000)#valor de gi para até quanto, nesse caso: 1000
+    Problema3(30)#soma dos n primeiros numeros de marsene, nesse caso: 30
+    Problema3_resolução(17)#soma dos n primeiros numeros de marsene, nesse caso: 15
     
     
 if __name__ == '__main__':
